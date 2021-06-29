@@ -8,6 +8,7 @@ public class SmartStoreApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(SmartStoreApplication.class, args);
+    System.out.println("hello world");
   }
 
 }
