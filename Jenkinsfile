@@ -25,13 +25,13 @@ pipeline {
                  success {
                       sh ("curl -X POST -H \"Content-Type: application/json\" \
                       --data '{\"state\": \"success\", \"context\": \"@@pass ci test & build\", \"target_url\": \"http://115.85.180.192:8080/job/make-delivery\"}' \
-                      \"https://${GITHUB_TOKEN}@api.github.com/repos/f-lab-edu/make-delivery/statuses/${GIT_COMMIT_SHA}\"")
+                      \"https://${GITHUB_TOKEN}@api.github.com/repos/isaac/smart-store/statuses/${GIT_COMMIT_SHA}\"")
                     }
 
                     failure {
                       sh ("curl -X POST -H \"Content-Type: application/json\" \
                       --data '{\"state\": \"failure\", \"context\": \"@@failure ci test & build\", \"target_url\": \"http://115.85.180.192:8080/job/make-delivery\"}' \
-                      \"https://${GITHUB_TOKEN}@api.github.com/repos/f-lab-edu/make-delivery/statuses/${GIT_COMMIT_SHA}\"")
+                      \"https://${GITHUB_TOKEN}@api.github.com/repos/isaac/smart-store/statuses/${GIT_COMMIT_SHA}\"")
                     }
             }
         }
