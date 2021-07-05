@@ -11,14 +11,10 @@ pipeline {
         		echo 'hello world!'
         	}
         }
-    }
-    
-    stages {
         stage('build'){
         	steps{
         		sh 'mvn clean package'
         	}
         }
     }
-    
 }
