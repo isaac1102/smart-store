@@ -15,6 +15,15 @@ pipeline {
 		sh 'java -version'
             }
         }
+	    
+	    
+	stage('ttt'){    
+		steps{
+		    sh 'echo \"This is Test...!!!\"'
+		}
+			
+	}
+		    
     	stage('Build') {
             steps {
                 sh "mvn -DskipTests clean package"
