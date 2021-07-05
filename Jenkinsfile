@@ -19,7 +19,7 @@ pipeline {
 	    
 	stage('ttt'){    
 		steps{
-		    sh 'echo \"This is Test...!!!\"'
+		    sh 'echo This is Test...!!!'
 		}
 			
 	}
