@@ -1,10 +1,6 @@
 pipeline {
     agent any
-
-    options {
-        skipDefaultCheckout()
-    }
-
+ 
     stages {
         stage('git checkout & clone') {
             steps {
