@@ -2,9 +2,9 @@ pipeline {
     agent any
  
     stages {
-        stage('print'){
+        stage('Build'){
         	steps{
-        		echo 'hello world!'
+        		sh 'mvn clean package'
         	}
         }
     }
