@@ -28,10 +28,10 @@ pipeline {
         
         stage('Send Buld jar'){
         	steps{
-        		sh "ll"
-        		sh "pwd"
-        		sh "cd target"
-        		sh "pwd"
+        		sh 'll'
+        		sh 'pwd'
+        		sh 'cd target'
+        		sh 'pwd'
 				
         	} 
 		}
