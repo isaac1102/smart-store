@@ -25,5 +25,9 @@ pipeline {
                 sh 'mvn -Dmaven.test.failure.ignore=true install clean package' 
             }
         }
+        
+        stage('Send Buld jar'){
+			sh "scp -P 1235 smartstore_isaac2/target/*.jar root@106.10.45.18:/smart-store2/app/smart-store.jar"
+		}
     }
 }
