@@ -24,7 +24,7 @@ pipeline {
         	steps{
         		sh 'ls -al'
         		sh 'pwd'
-        		sh 'cd ./target'
+        		sh 'dir ./target'
         		sh 'pwd'
 				
         	} 
