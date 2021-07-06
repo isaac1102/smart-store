@@ -29,7 +29,7 @@ pipeline {
         stage('Send Buld jar'){
         	steps{
 				sh "scp -P 1235 smartstore_isaac2/target/*.jar root@106.10.45.18:/smart-store2/app/smart-store.jar"
-        	}
+        	} 
 		}
     }
 }
