@@ -20,13 +20,17 @@ pipeline {
         	}
         }
         
+        stage('Build'){
+        	steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true install clean package' 
+            }
+        }
+
+        
         stage('Send Buld jar'){
         	steps{
-        		sh 'ls -al'
-        		sh 'pwd'
         		sh 'dir ./target'
-        		sh 'pwd'
-				
+				sh "scp -P 1235 smart-store-0.0.1-SNAPSHOT.jar root@106.10.45.18:/smart-store2/app/smart-store.jar"
         	} 
 		}
     }
