@@ -22,7 +22,7 @@ pipeline {
         
         stage('report position'){
         	steps{
-        		pwd
+        		sh 'pwd'
         	}
         }
         
