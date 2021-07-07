@@ -16,7 +16,7 @@ pipeline {
         
         stage('print'){
         	steps{
-        		echo 'hello world!'
+        		echo 'hello world!' 
         	}
         }
         
