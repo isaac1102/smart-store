@@ -62,6 +62,7 @@ public class RoutingDataSourceConfig {
       @Override
       protected Object determineCurrentLookupKey() {
         boolean isReadonly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
+        System.out.println(isReadonly);
 
         return isReadonly ?  DatabaseType.SLAVE : DatabaseType.MASTER;
       }
