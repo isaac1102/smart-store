@@ -28,7 +28,7 @@ pipeline {
         
         stage('copy to was'){
         	steps{
-        		sh 'scp -P 1235 /var/lib/jenkins/workspace/smartstore_isaac2/target/smart-store-0.0.1-SNAPSHOT.jar root@106.10.45.18:/smart-store/app/smart-store.jar'
+        		sh 'scp -P 1235 /var/lib/jenkins/workspace/smartstore_isaac2/target/smart-store-0.0.1-SNAPSHOT.jar root@106.10.45.18:/root/smart-store/app/smart-store.jar'
         	}
         }
     }
