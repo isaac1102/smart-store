@@ -63,7 +63,7 @@ public class RoutingDataSourceConfig {
       protected Object determineCurrentLookupKey() {
         boolean isReadonly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
 
-        return isReadonly ?  DatabaseType.SLAVE : DatabaseType.MASTER;
+        return isReadonly ?  DatabaseType.MASTER : DatabaseType.MASTER;
       }
     };
 
