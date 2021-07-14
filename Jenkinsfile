@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    
+    tools{
+    	maven "M3"
+        jdk "java 1.8"
+    }
  
     stages {
         stage('build'){
