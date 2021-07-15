@@ -64,7 +64,7 @@ public class RoutingDataSourceConfig {
         boolean isReadonly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
         System.out.println(isReadonly);
 
-        return isReadonly ?  DatabaseType.SLAVE : DatabaseType.SLAVE;
+        return isReadonly ?  DatabaseType.SLAVE : DatabaseType.MASTER;
       }
     };
 
