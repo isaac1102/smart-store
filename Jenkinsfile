@@ -21,7 +21,7 @@ pipeline {
         
         stage('connect to deploy server and deploy'){
         	steps{
-        		sh 'ssh -p 1235 -i /var/lib/jenkins/.ssh/id_rsa root@106.10.45.18 "/root/smart-store/app/deploy.sh"' 
+        		sh 'ssh -p 1235 -i /var/lib/jenkins/.ssh/id_rsa root@106.10.45.18 -T sh < "/root/smart-store/app/deploy.sh"' 
         	}
         }
     }
