@@ -62,16 +62,15 @@ public class RoutingDataSourceConfig {
       @Override
       protected Object determineCurrentLookupKey() {
         boolean isReadonly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
-        System.out.println(isReadonly);
 
-        return isReadonly ?  DatabaseType.MASTER : DatabaseType.MASTER;
+        return isReadonly ?  DatabaseType.SLAVE : DatabaseType.MASTER;
       }
     };
 
     Map<Object, Object> targetDataSources = new HashMap<>();
 
-    targetDataSources.put(DatabaseType.MASTER, masterDataSource);
-    targetDataSources.put(DatabaseType.SLAVE, slaveDataSource);
+    targetDataSources.put(DatabaseType.MASTER.getType(), masterDataSource);
+    targetDataSources.put(DatabaseType.SLAVE.getType(), slaveDataSource);
 
     routingDataSource.setTargetDataSources(targetDataSources);
     routingDataSource.setDefaultTargetDataSource(masterDataSource);
